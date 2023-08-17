@@ -240,7 +240,7 @@ def modelling(dataset):
     dataset['credit amount'] = np.log(dataset['credit amount'])
 
     # separamos la variable objetivo (y) de las variables predictoras (X)
-    X = dataset.drop('Risk_bad', 1).values
+    X = dataset.drop('Risk_bad', axis=1).values
     y = dataset['Risk_bad'].values
     
     # Spliting X and y into train and test version
